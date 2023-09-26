@@ -1,41 +1,27 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class PoligonMain {
     public static void main(String[] args) {
         
-        List<Electrodomestic> llista = new ArrayList<>();
-        List<Electrodomestic> llistaCopy = new ArrayList<>();
+        List<Poligon> llista = new ArrayList<>();
+        List<Poligon> llistaCopy = new ArrayList<>();
 
-        Rentadora rentadora = new Rentadora(); 
+        Cercle circle = new Cercle();
+        circle.x = 10;
+        circle.y = 20;
+        circle.radius = 15;
+        circle.color = "red";
+        llista.add(circle);
 
-        rentadora.nom = "Sony 2000";
-        rentadora.color = "White";
-        rentadora.preu = 500;
-        rentadora.marca = "SONY";
-        rentadora.eficiencia = "B";
-        rentadora.revolucions = 10;
-        rentadora.soroll = 200;
+        Cercle anotherCircle = (Cercle) circle.clone();
+        llista.add(anotherCircle);
 
-        llista.add(rentadora);
-   
-        Rentadora anotherRentadora = (Rentadora) rentadora.clone();
-        llista.add(anotherRentadora);
-
-        Forn forn = new Forn();
-
-        forn.nom = "Fornet 77";
-        forn.color = "Black";
-        forn.preu = 770;
-        forn.marca = "BOSH";
-        forn.eficiencia = "C";
-        forn.temperatura = 300;
-        forn.autonetella = "si";
-
-        llista.add(forn);
-
-        Forn anotherForn = (Forn) forn.clone();
-
+        Rectangle rectangle = new Rectangle();
+        rectangle.width = 10;
+        rectangle.height = 20;
+        rectangle.color = "blue";
+        llista.add(rectangle);
 
         // Clonar la llista
         for (Poligon obj : llista) {
