@@ -38,7 +38,7 @@ public class Main {
 
 
         // Clonar la llista
-        for (Poligon obj : llista) {
+        for (Electrodomestic obj : llista) {
             llistaCopy.add(obj.clone());
         }
 
@@ -58,15 +58,15 @@ public class Main {
         }
     }
 
-    static void compare (int i, Poligon a, Poligon b) {
+    static void compare (int i, Electrodomestic a, Electrodomestic b) {
         if (a == b) {
-            System.out.println(i + ": Els poligons són el mateix objecte");
+            System.out.println(i + ": Els electrodomestics són el mateix objecte");
         } else {
-            System.out.print(i + ": Els poligons són objectes diferents - ");
+            System.out.print(i + ": Els electrodomestics són objectes diferents - ");
             if (a.equals(b)) {
-                System.out.println(i + ": Els poligons són idèntics");
+                System.out.println(i + ": Els electrodomestics són idèntics");
             } else {
-                System.out.println(i + ": Els poligons NO són identics");
+                System.out.println(i + ": Els electrodomestics NO són identics");
             }
         }
     }
